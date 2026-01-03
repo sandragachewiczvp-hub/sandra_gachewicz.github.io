@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="pl">
+ <style>
+    body {
+      background-color: #009c8c;
+      color: 37262b;
+      font-family: Arial, sans-serif;
+    }
+
+    h2, h3 {
+      color: #330000;
+      font-style: italic;
+      text-align: center;
+    }
+
+    table {
+      margin-left: auto;
+      margin-right: auto;
+      border-collapse: collapse;
+    }
+
+    table, th, td {
+      border: 1px solid black;
+      padding: 5px;
+    }
+
+    hr {
+      margin: 20px 0;
+    }
+  </style>
+</head>
+
+<body>
+<html>
+   <head> 
+         <meta charset="utf-8">
+         <meta name = "descriptiom" content="4PD.txt">
+         <center><titlr>Strona Głowna</title></center>
+  </head>
+<table style="border:none;">
+    <tr>
+      <td style="border:none;">
+
+<h1 id="powitanie"></h1>
+
+<table style="border:none;">
+    <tr>
+      <td style="border:none;">
+<script>
+  const teraz = new Date();
+  const godzina = teraz.getHours();
+  let tekstPowitania = "";
+
+  if (godzina >= 5 && godzina < 12) {
+    tekstPowitania = "Dzień dobry! ";
+  } else if (godzina >= 12 && godzina < 18) {
+    tekstPowitania = "Witaj po południu!";
+  } else if (godzina >= 18 && godzina < 22) {
+    tekstPowitania = "Dobry wieczór!";
+  } 
+
+  document.getElementById("powitanie").textContent = tekstPowitania;
+</script>
+
+<table style="border:none;">
+    <tr>
+      <td style="border:none;">
+          <button id="colorBtn">Zmień kolor tła</button>
+<h3>Dane</h3>
+<table style="border:none;">
+    <tr>
+      <td style="border:none;">
+<!-- Podstawowe pole tekstowe -->
+  <span style="color:red;">Imię i nazwisko:</span> Sandra Gachewicz<br>
+        <span style="color:red;">Zawód:</span> Student<br>
+        <span style="color:red;">Miejsce zamieszkania:</span> Płock<br>
+        <span style="color:red;">"Podaj e-mail"<input name="E-mail"><br>
+        <span style="color:red;">"Podaj hasło"<input name="Hasło"><br>
+ <h3>Plan</h3>
+
+  <table>
+    <tr>
+      <th>Poniedziałek</th>
+      <th>Wtorek</th>
+      <th>Środa</th>
+      <th>Czwartek</th>
+      <th>Piątek</th>
+      <th>Sobota</th>
+      <th>Niedziela</th>
+    </tr>
+    <tr>
+      <td colspan="5" style="text-align:center;">
+        ZAJĘCIA<br>
+        8<sup>00</sup>–18<sup>00</sup>
+      </td>
+      <td>WOLNE</td>
+      <td>WOLNE</td>
+    </tr>
+  </table>
+
+  <hr>
+
+  <h3>Zainteresowania</h3>
+
+  <table style="border:none;">
+    <tr>
+      <td style="border:none;">
+        <ol>
+          <li>Rysowanie</li>
+          <li>Gry video</li>
+          <li>Muzyka</li>
+        </ol>
+      </td>
+    </tr>
+  </table>
+
+
+ <h3>Formularz</h3>
+   
+   <table style="border:none;">
+    <tr>
+      <td style="border:none;">
+        <form>
+
+<!-- Pole typu RADIO -->
+        <p>Podaj swoją płeć:</p>
+        <input type="radio" name="Płeć" value="Kobieta">Kobieta
+        <input type="radio" name="Płeć" value="Mężczyzna">Mężczyzna
+<!-- Pole typu CHECKBOX -->
+    <p>języki</p>
+        <input type="checkbox" name="język" value="Polski">Polski<br>
+        <input type="checkbox" name="język" value="Angielski">Angielski<br>
+        <input type="checkbox" name="język" value="Niemiecki">Niemiecki<br>
+        <!-- Lista rozwijalna (typ podstawowy) z zaznaczoną opcją domyślną -->
+<p>Poziom umiejętności</p>
+   <select name="poziom">
+	<option selected>Początkujący</option>
+	<option>średnio zaawansowany</option>
+	<option>zaawansowany</option>
+    <option>Ekspert</option>
+</select>
+   <!-- Pole komentarza (o powiększonych rozmiarach oraz z tekstem domyślnym) -->
+      <p>Podaj Uwagę:</p>
+      <textarea name="Komentarz" cols="50" rows="10">Proszę, wpisz tutaj jakąś uwagę...</textarea>
+      <br><br><br>
+      <!-- Przycisk WYŚLIJ -->
+      <input type="submit" value="Wyślij formularz">
+      <!-- Przycisk WYCZYŚĆ DANE -->
+      <input type="reset" value="Wyczyść dane">
+      </div></form><body>
+
+    <!-- Miejsce na powitanie -->
+    <div id="greeting"></div>
+
+ 
+
+    <script>
+      
+               function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        function changeBackgroundColor() {
+            document.body.style.backgroundColor = getRandomColor();
+        }
+
+
+        // Obsługa kliknięcia przycisku
+        document.getElementById('colorBtn').addEventListener('click', changeBackgroundColor);
+    </script>
+
+</body>
+
+
